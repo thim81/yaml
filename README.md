@@ -21,6 +21,7 @@ yarn add @stoplight/yaml
 - **[getJsonPathForPosition](./src/getJsonPathForPosition.ts)**: Computes JSON path for given position.
 - **[getLocationForJsonPath](./src/getLocationForJsonPath.ts)**: Retrieves location of node matching given JSON path.
 - **[parseWithPointers](./src/parseWithPointers.ts)**: Parses YAML into JSON and also returns diagnostics as well as full ast with line information.
+- **[safeStringify](./src/safeStringify.ts)**: Stringifies JavaScript objects to YAML. Supports `quotingType` and `forceQuotes` options via `js-yaml`.
 
 ```ts
 // basic example of parseWithPointers
