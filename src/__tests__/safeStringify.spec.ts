@@ -99,4 +99,11 @@ b:
 
     expect(safeStringify(obj)).toEqual(`value: 1267650600228229401496703205376\n`);
   });
+
+  it('should respect quotingType and forceQuotes options', () => {
+    const obj = { path: '/foo/{id}' };
+
+    expect(safeStringify(obj, { quotingType: '"', forceQuotes: true })).toEqual(`path: \"/foo/{id}\"\n`);
+    expect(safeStringify({ val: 'test' }, { forceQuotes: true })).toEqual(`val: 'test'\n`);
+  });
 });
